@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer/MainSection";
-import LeftSection from "../components/LeftPanel/MainSection";
-import RightSection from "../components/RightPanel/MainSection";
+import LeftSection from "@/components/LeftPanel/MainSection";
+import RightSection from "@/components/RightPanel/MainSection";
 import {
   ResizableHandle,
   ResizablePanel,
@@ -12,7 +12,7 @@ export default function Home() {
     <main className="flex flex-col h-screen justify-between">
       <div className="flex flex-row justify-between h-screen">
         <ResizablePanelGroup direction="horizontal">
-          <ResizablePanel defaultSize={35} className="bg-green-500">
+          <ResizablePanel defaultSize={35}>
             <LeftSection />
           </ResizablePanel>
           <ResizableHandle withHandle />
