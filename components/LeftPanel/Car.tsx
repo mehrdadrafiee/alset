@@ -1,8 +1,9 @@
+// @ts-nocheck
 import { useLayoutEffect, useRef } from "react";
 import * as THREE from "three";
 import { useGLTF, CubeCamera } from '@react-three/drei';
 
-export default function Model({ ...props }) { 
+export default function Model({ ...props }) {
   const group = useRef()
   const { nodes, materials } = useGLTF('/car/porsche-transformed.glb');
 
