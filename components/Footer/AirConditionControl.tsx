@@ -29,15 +29,15 @@ export default function AirConditionControl() {
 
   return (
     <>
-      <Button variant="ghost" size="icon" className="hover:bg-transparent">
+      <Button variant="ghost" size="icon" className="hover:bg-transparent hover:text-white">
         <ChevronLeft 
           onClick={() => handleTemperatureChange(temperature - 1)} 
-          className={`w-6 h-6 text-white opacity-50 ${temperature <= MIN_TEMPERATURE ? 'cursor-not-allowed' : ''}`} />
+          className={`w-6 h-6 opacity-50 ${temperature <= MIN_TEMPERATURE ? 'cursor-not-allowed' : ''}`} />
       </Button>
       <DropdownMenu open={openAirConditionMenu} onOpenChange={setOpenAirConditionMenu}>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="icon" className="hover:bg-transparent">
-            <span className="text-3xl text-white">{temperature}<small>°F</small></span>
+          <Button variant="ghost" size="icon" className="hover:bg-transparent hover:text-white">
+            <span className="text-3xl">{temperature}<small>°F</small></span>
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-64 p-4">
@@ -57,10 +57,10 @@ export default function AirConditionControl() {
             }} />
         </DropdownMenuContent>
       </DropdownMenu>
-      <Button variant="ghost" size="icon" className="hover:bg-transparent">
+      <Button variant="ghost" size="icon" className="hover:bg-transparent hover:text-white">
         <ChevronRight 
           onClick={() => handleTemperatureChange(temperature + 1)} 
-          className={`w-6 h-6 text-white opacity-50 ${temperature >= MAX_TEMPERATURE ? 'cursor-not-allowed' : ''}`} />
+          className={`w-6 h-6 opacity-50 ${temperature >= MAX_TEMPERATURE ? 'cursor-not-allowed' : ''}`} />
       </Button>
     </>
   )

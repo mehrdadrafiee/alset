@@ -14,13 +14,13 @@ export default function VolumeControl() {
 
   const renderVolumeIcon = () => {
     if (volume === 0) {
-      return <VolumeX className="w-8 h-8 text-white" />
+      return <VolumeX className="w-8 h-8" />
     }
     if (volume <= 50) {
-      return <Volume1 className="w-8 h-8 text-white" />
+      return <Volume1 className="w-8 h-8" />
     }
     if (volume > 50 && volume <= 100) {
-      return <Volume2 className="w-8 h-8 text-white" />
+      return <Volume2 className="w-8 h-8" />
     }
   }
 
@@ -30,12 +30,12 @@ export default function VolumeControl() {
   }
   return (
     <>
-      <Button variant="ghost" size="icon" className="hover:bg-transparent">
-        <ChevronLeft onClick={() => handleVolumeChange(volume - 1)} className="w-6 h-6 text-white opacity-50" />
+      <Button variant="ghost" size="icon" className="hover:bg-transparent hover:text-white">
+        <ChevronLeft className="w-6 h-6 opacity-50" onClick={() => handleVolumeChange(volume - 1)} />
       </Button>
       <DropdownMenu open={openVolumeMenu} onOpenChange={setOpenVolumeMenu}>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="icon" className="hover:bg-transparent">
+          <Button variant="ghost" size="icon" className="hover:bg-transparent hover:text-white">
             {renderVolumeIcon()}
           </Button>
         </DropdownMenuTrigger>
@@ -52,8 +52,8 @@ export default function VolumeControl() {
           </div>
         </DropdownMenuContent>
       </DropdownMenu>
-      <Button variant="ghost" size="icon" className="hover:bg-transparent">
-        <ChevronRight onClick={() => handleVolumeChange(volume + 1)}   className="w-6 h-6 text-white opacity-50" />
+      <Button variant="ghost" size="icon" className="hover:bg-transparent hover:text-white">
+        <ChevronRight className="w-6 h-6 opacity-50" onClick={() => handleVolumeChange(volume + 1)} />
       </Button>
     </>
   )

@@ -7,20 +7,20 @@ import VolumeControl from './VolumeControl';
 export default function MainSection() {
 
   return (
-    <div className="bg-gray-900 h-20 flex items-center justify-around">
-      <button className="flex flex-col items-center text-white hover:text-gray-400">
+    <div className="bg-black text-gray-300 h-20 flex items-center justify-around">
+      <button className="flex flex-col items-center hover:text-white">
         <CarFront className="w-8 h-8" />
       </button>
       <div className="flex flex-row items-center space-x-4">
         <AirConditionControl />
       </div>
-      <button className="flex flex-col items-center text-white hover:text-gray-400">
+      <button className="flex flex-col items-center hover:text-white">
         <Music className="w-8 h-8" />
       </button>
-      <button className="flex flex-col items-center text-white hover:text-gray-400">
+      <button className="flex flex-col items-center hover:text-white">
         <Map className="w-8 h-8" />
       </button>
-      <button className="flex flex-col items-center text-white hover:text-gray-400">
+      <button className="flex flex-col items-center hover:text-white">
         <Settings className="w-8 h-8" />
       </button>
       <div className="flex flex-row items-center space-x-4">

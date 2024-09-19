@@ -12,7 +12,7 @@ export default function Home() {
     <main className="flex flex-col h-screen justify-between">
       <div className="flex flex-row justify-between h-screen">
         <ResizablePanelGroup direction="horizontal">
-          <ResizablePanel defaultSize={35}>
+          <ResizablePanel defaultSize={35} className="bg-gray-100">
             <LeftSection />
           </ResizablePanel>
           <ResizableHandle withHandle />

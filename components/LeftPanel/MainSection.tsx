@@ -7,6 +7,7 @@ import { ContactShadows, OrbitControls, PerspectiveCamera } from '@react-three/d
 import { Perf } from 'r3f-perf'
 import { Card, CardContent } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
+import Media from "./components/Media";
 
 export default function MainSection() {
   return (
@@ -29,17 +30,17 @@ export default function MainSection() {
         <PerspectiveCamera zoom={1} makeDefault position={[15, 50, 90]} fov={100} />
         {/* <Perf /> */}
       </Canvas>
-      <Carousel className="absolute bottom-24 h-40 w-[670px] bg-white">
+      <Carousel className="absolute bottom-24 h-40 w-[670px] shadow-md">
         <CarouselContent>
-          {Array.from({ length: 3 }).map((_, index) => (
-            <CarouselItem key={index}>
-              <Card className="shadow-md h-40 bg-gray-50">
-                <CardContent className="flex items-center justify-center p-2">
-                  <p className="text-black">Card Content</p>
+          {/* {Array.from({ length: 3 }).map((_, index) => ( */}
+            <CarouselItem>
+              <Card className="h-40 bg-white">
+                <CardContent className="flex items-center justify-center p-0">
+                  <Media />
                 </CardContent>
               </Card>
             </CarouselItem>
-          ))}
+          {/* ))} */}
         </CarouselContent>
       </Carousel>
     </section>
