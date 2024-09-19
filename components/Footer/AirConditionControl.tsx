@@ -37,7 +37,7 @@ export default function AirConditionControl() {
       <DropdownMenu open={openAirConditionMenu} onOpenChange={setOpenAirConditionMenu}>
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" size="icon" className="hover:bg-transparent hover:text-white">
-            <span className="text-3xl">{temperature}<small>°F</small></span>
+            <span className="text-3xl">{temperature === 60 ? "Min" : temperature === 80 ? "Max" : temperature}<small>{temperature === 60 ? null : temperature === 80 ? null : "°F"}</small></span>
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-64 p-4">
