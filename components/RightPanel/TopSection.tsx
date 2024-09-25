@@ -19,7 +19,7 @@ export default function TopSection() {
   }, []);
 
   return (
-    <section className="absolute top-0 left-0 w-full z-10 bg-white bg-opacity-50 h-10 backdrop-blur-sm">
+    <section className="absolute top-0 left-0 w-full z-10 bg-gradient-to-b from-white to-transparent h-10 backdrop-blur-xs">
       <div className="flex flex-row justify-between items-center h-full px-4">
         <div className="flex flex-row items-center space-x-8">
           <button onClick={() => setIsLocked(!isLocked)}>
